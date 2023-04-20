@@ -17,7 +17,7 @@
     },
     {
       "src": "/get-podcast/(.*)",
-      "dest": "/get-podcas"
+      "dest": "/get-podcast"
     }
   ]
 }
