@@ -16,7 +16,6 @@ app.get('/', async (req, res) => {
     const response = await fetch(
       'https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json',
     );
-    if (!response.ok) return;
 
     const data = await response?.json();
     res.send(data);
@@ -30,7 +29,6 @@ app.get('/get-top-podcast', async (req, res) => {
     const response = await fetch(
       'https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json',
     );
-    if (!response.ok) return;
 
     const data = await response?.json();
     res.send(data);
@@ -45,7 +43,7 @@ app.get('/get-podcast', async (req, res) => {
     const response = await fetch(
       `https://itunes.apple.com/lookup?id=${id}&media=podcast&entity=podcastEpisode&limit=20`,
     );
-    if (!response.ok) return;
+
     const data = await response?.json();
     res.send(data);
   } catch (error) {
